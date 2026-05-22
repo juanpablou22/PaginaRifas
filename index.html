@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MB Signature Rifas - Rifas y Sorteos Exclusivos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .glass-card {
+            background: rgba(20, 20, 20, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F2CA50 50%, #B8860B 100%);
+        }
+        .whatsapp-pulse {
+            animation: pulse-gold 2s infinite;
+        }
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#d4af37",
+                        "on-primary": "#3c2f00",
+                        "primary-container": "#d4af37",
+                        "on-primary-container": "#554300",
+                        "secondary": "#c8c6c5",
+                        "on-secondary": "#313030",
+                        "surface": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "surface-variant": "#353534",
+                        "on-surface-variant": "#d0c5af",
+                        "background": "#0e0e0e",
+                        "on-background": "#e5e2e1",
+                        "outline": "#99907c",
+                        "outline-variant": "#4d4635",
+                        "tertiary": "#bfcdff",
+                        "on-tertiary": "#082b72",
+                        "surface-container": "#201f1f",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-highest": "#353534",
+                        "surface-container-lowest": "#0e0e0e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "stack-sm": "8px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "gutter": "32px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-caps": ["Montserrat"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar Component -->
+<header class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-xl border-b border-outline-variant/30">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
+<div class="flex items-center gap-3">
+                        <img src="logopagina.jpeg" alt="Logo MB Signature Rifas" class="h-12 w-auto object-contain" />
+                        <span class="font-display-lg text-headline-md tracking-tighter text-primary">MB Signature Rifas</span>
+                    </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-[12px] tracking-widest uppercase" href="#premios">Premios</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-[12px] tracking-widest uppercase" href="#como-jugar">Cómo Jugar</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-[12px] tracking-widest uppercase" href="#faq">Preguntas</a>
+</div>
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold text-[14px] flex items-center gap-2 transition-transform scale-95 active:scale-100 hover:brightness-110 shadow-lg shadow-primary/20" href="https://chat.whatsapp.com/L6FR4fjVzm38WAV6TiD1vg?mode=gi_t" target="_blank" rel="noopener noreferrer">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+            Unirse a WhatsApp
+        </a>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-16 pb-24 md:pt-32 md:pb-40 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary font-bold text-[12px] tracking-widest uppercase mb-8">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span>Rifa Activa</span>
+</div>
+<h1 class="font-display-lg text-[40px] md:text-[56px] leading-[1.1] text-on-background mb-8 font-extrabold">
+                    ¡Gana Millonarios <span class="text-primary italic">Premios en Efectivo!</span>
+</h1>
+<p class="text-lg text-on-surface-variant mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Participa en los sorteos más exclusivos de Colombia. Todo se gestiona de forma segura a través de nuestra comunidad de WhatsApp. ¡Tu fortuna te espera!
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<a class="whatsapp-pulse gold-gradient text-on-primary px-10 py-5 rounded-2xl font-bold text-xl flex items-center justify-center gap-3 transition-all hover:-translate-y-1 shadow-2xl shadow-primary/20 group" href="https://chat.whatsapp.com/L6FR4fjVzm38WAV6TiD1vg?mode=gi_t" target="_blank" rel="noopener noreferrer">
+<span class="material-symbols-outlined text-[32px]">chat</span>
+                        Unirse al Grupo VIP
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="mt-10 flex items-center justify-center lg:justify-start gap-4 text-on-surface-variant">
+<div class="flex -space-x-2">
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center text-[12px]">👤</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center text-[12px]">👤</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center text-[12px]">👤</div>
+</div>
+<p class="text-sm font-medium tracking-wide">+2,500 colombianos participando</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-primary/5 rounded-full blur-[100px]"></div>
+<div class="relative rounded-[2.5rem] overflow-hidden shadow-[0_0_50px_rgba(212,175,55,0.2)] border border-primary/20 bg-surface-container">
+<img alt="Mano sosteniendo billetes de pesos colombianos" class="w-full h-auto transform transition-transform duration-1000 hover:scale-105" src="Premio1.jpeg"/>
+<div class="absolute bottom-8 left-8 right-8 glass-card p-6 rounded-2xl flex justify-between items-center border border-primary/30">
+<div>
+<p class="text-primary font-bold text-[10px] uppercase tracking-[0.2em] mb-1">Premio Mayor Actual</p>
+<p class="font-bold text-2xl text-on-surface">$50.000.000 COP</p>
+</div>
+<div class="bg-primary text-on-primary px-4 py-1.5 rounded-lg font-bold text-sm">
+                            EFECTIVO
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Steps Section -->
+<section class="py-32 bg-surface-container-low px-margin-mobile md:px-margin-desktop border-y border-outline-variant/10" id="como-jugar">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline-md text-[36px] md:text-[48px] text-on-background mb-6">¿Cómo ganar en Grande?</h2>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Tres pasos simples que pueden cambiar tu vida hoy mismo.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-10 rounded-[2rem] border border-outline-variant/20 relative overflow-hidden group hover:border-primary/50 transition-all duration-300">
+<div class="text-primary text-[100px] font-black opacity-5 absolute -right-4 -top-8 italic">01</div>
+<div class="w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center text-primary mb-10 group-hover:bg-primary group-hover:text-on-primary transition-all duration-500">
+<span class="material-symbols-outlined text-[40px]">group_add</span>
+</div>
+<h3 class="font-bold text-2xl mb-4 text-on-surface">Ingresa al Grupo</h3>
+<p class="text-on-surface-variant leading-relaxed">Nuestra comunidad exclusiva de WhatsApp es el único canal oficial para ver números disponibles.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-10 rounded-[2rem] border border-outline-variant/20 relative overflow-hidden group hover:border-primary/50 transition-all duration-300">
+<div class="text-primary text-[100px] font-black opacity-5 absolute -right-4 -top-8 italic">02</div>
+<div class="w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center text-primary mb-10 group-hover:bg-primary group-hover:text-on-primary transition-all duration-500">
+<span class="material-symbols-outlined text-[40px]">confirmation_number</span>
+</div>
+<h3 class="font-bold text-2xl mb-4 text-on-surface">Elige tus Cifras</h3>
+<p class="text-on-surface-variant leading-relaxed">Selecciona tus números de la suerte. Usamos los últimos dígitos de la Lotería Nacional de Colombia.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-10 rounded-[2rem] border border-outline-variant/20 relative overflow-hidden group hover:border-primary/50 transition-all duration-300">
+<div class="text-primary text-[100px] font-black opacity-5 absolute -right-4 -top-8 italic">03</div>
+<div class="w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center text-primary mb-10 group-hover:bg-primary group-hover:text-on-primary transition-all duration-500">
+<span class="material-symbols-outlined text-[40px]">currency_exchange</span>
+</div>
+<h3 class="font-bold text-2xl mb-4 text-on-surface">Reporta y Gana</h3>
+<p class="text-on-surface-variant leading-relaxed">Envía tu comprobante de pago por Nequi o Daviplata. Recibe tu boleta digital y espera el sorteo.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Prize Details Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop" id="premios">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-20 items-center">
+<div class="lg:col-span-3">
+<div class="mx-auto w-full max-w-2xl rounded-[3rem] overflow-hidden shadow-2xl relative border border-outline-variant/20">
+<img alt="Mujer sosteniendo billetes de pesos colombianos" class="w-full h-[600px] object-cover" src="Premio2.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent flex items-end p-12">
+<div class="glass-card p-10 rounded-[2rem] w-full flex flex-col md:flex-row justify-between items-center gap-8 border border-primary/30">
+<div>
+<h3 class="text-3xl font-bold text-on-surface mb-2">Gran Sorteo Millonario</h3>
+<p class="text-primary font-medium tracking-wide">Pago inmediato tras resultados oficiales</p>
+</div>
+<div class="text-center md:text-right">
+<p class="text-on-surface-variant font-bold text-[10px] uppercase tracking-[0.3em] mb-2">FECHA PRÓXIMO SORTEO</p>
+<p class="text-2xl font-bold text-primary">Sábado, 21:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2 space-y-10">
+<div>
+<h2 class="text-[40px] font-bold leading-tight mb-6">Detalles y <span class="text-primary">Transparencia</span></h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Nuestros sorteos se rigen por los resultados de la Lotería de Medellín o Lotería de Bogotá, garantizando honestidad absoluta.</p>
+</div>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-1 rounded-full">check</span>
+<span class="text-on-surface text-lg">Resultados basados en Lotería Nacional Oficial.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-1 rounded-full">check</span>
+<span class="text-on-surface text-lg">Pagos rápidos vía Nequi, Daviplata o Bancolombia.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-1 rounded-full">check</span>
+<span class="text-on-surface text-lg">Más de 500 ganadores comprobables en el grupo.</span>
+</li>
+</ul>
+<div class="bg-surface-container-high p-8 rounded-[2rem] border border-primary/20">
+<div class="flex justify-between mb-4">
+<span class="font-bold text-on-surface">Boletos Vendidos</span>
+<span class="font-bold text-primary">85%</span>
+</div>
+<div class="w-full bg-background rounded-full h-4 overflow-hidden border border-outline-variant/30 p-1">
+<div class="gold-gradient h-full rounded-full transition-all duration-[2000ms] shadow-[0_0_15px_rgba(212,175,55,0.5)]" style="width: 85%"></div>
+</div>
+<p class="text-[12px] text-on-surface-variant mt-4 italic text-center font-medium">¡Solo quedan 150 números para cerrar este sorteo!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-32 bg-surface-container-lowest px-margin-mobile md:px-margin-desktop" id="faq">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-[36px] font-bold text-on-background">Preguntas Frecuentes</h2>
+<div class="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+</div>
+<div class="space-y-6">
+<details class="group bg-surface-container p-4 rounded-2xl border border-outline-variant/10 transition-all duration-300" open="">
+<summary class="flex justify-between items-center p-4 cursor-pointer list-none font-bold text-lg text-on-surface">
+                        ¿Cómo verifico si gané?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-on-surface-variant border-t border-outline-variant/10 mt-4 pt-4 leading-relaxed">
+                        Usamos los últimos 4 dígitos del premio mayor de la Lotería Nacional programada. Los resultados se publican en vivo en nuestro grupo de WhatsApp apenas sale el boletín oficial.
+                    </div>
+</details>
+<details class="group bg-surface-container p-4 rounded-2xl border border-outline-variant/10 transition-all duration-300">
+<summary class="flex justify-between items-center p-4 cursor-pointer list-none font-bold text-lg text-on-surface">
+                        ¿Cuál es el valor del número?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-on-surface-variant border-t border-outline-variant/10 mt-4 pt-4 leading-relaxed">
+                        Para el gran premio de $50 Millones, el valor por número es de $50.000 COP. Contamos con promociones especiales: lleva 3 por $120.000 COP.
+                    </div>
+</details>
+<details class="group bg-surface-container p-4 rounded-2xl border border-outline-variant/10 transition-all duration-300">
+<summary class="flex justify-between items-center p-4 cursor-pointer list-none font-bold text-lg text-on-surface">
+                        ¿Qué pasa si mi número no cae?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-4 pb-4 text-on-surface-variant border-t border-outline-variant/10 mt-4 pt-4 leading-relaxed">
+                        Si el premio mayor de la lotería no es asignado a ningún participante, el sorteo se reprograma para el siguiente viernes con la misma lotería hasta que haya un ganador garantizado.
+                    </div>
+</details>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto bg-surface-container-high rounded-[3rem] p-12 md:p-24 relative border border-primary/20 shadow-[0_0_100px_rgba(212,175,55,0.1)]">
+<div class="absolute top-0 right-0 p-12 opacity-10 hidden lg:block">
+<span class="material-symbols-outlined text-[350px] text-primary" style="font-variation-settings: 'FILL' 1">stars</span>
+</div>
+<div class="relative z-10 max-w-2xl text-center md:text-left">
+<h2 class="text-[40px] md:text-[56px] font-extrabold text-on-surface mb-8 leading-tight">Tu oportunidad de ser <span class="text-primary italic">Millonario</span></h2>
+                    <p class="text-on-surface-variant text-xl mb-12 opacity-90 leading-relaxed">No dejes pasar la oportunidad. Únete a nuestra comunidad y participa de rifas transparentes y seguras con MB Signature Rifas.</p>
+<a class="inline-flex items-center gap-4 gold-gradient text-on-primary px-12 py-6 rounded-2xl font-bold text-2xl transition-all hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(212,175,55,0.3)]" href="https://chat.whatsapp.com/L6FR4fjVzm38WAV6TiD1vg?mode=gi_t" target="_blank" rel="noopener noreferrer">
+<span class="material-symbols-outlined text-[36px]">chat</span>
+                    Entrar al Grupo Oficial
+                </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<section class="py-32 bg-background px-margin-mobile md:px-margin-desktop overflow-hidden border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Column 1: Image -->
+<div class="relative group order-2 lg:order-1">
+<div class="absolute -inset-4 bg-primary/20 blur-2xl rounded-full opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+<div class="relative rounded-[2.5rem] overflow-hidden border border-primary/30 shadow-2xl">
+<img alt="Marcela Betancourt - Fundadora de MB Signature Rifas" class="w-full h-auto object-cover transform transition-transform duration-700 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJRF4MCKKVbk6YyJzTrcpNWItzr8UIedLFu-PzPdqIyjpWqR1ANhCEva7Zg5GN-T8Q-pPIl-2FIgn98iuvOBnox0MS--kg2Drh7tY9ZSjAztM0r5SqGD6zbwDVOWmcOvyqSwoxDGQoRTE6dKLdfy7NmhBAaASX6YaY5EneSV8mK2yhPeJl5qB4b-9VNx_TX2gSTMxlTQWK8q3ZiD2SZCAjw0Iu-esuAhjVYjtcOI2s5nHoVGoSm47OHx_88JO4ISR1nfBo-PMYo8I"/>
+</div>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+</div>
+<!-- Column 2: Content -->
+<div class="space-y-8 order-1 lg:order-2">
+<div>
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary font-bold text-[12px] tracking-widest uppercase mb-6">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Confianza y Transparencia</span>
+</div>
+<h2 class="font-display-lg text-[36px] md:text-[48px] text-on-background mb-2 font-bold">Marcela Betancourt</h2>
+<p class="text-primary font-bold tracking-[0.1em] uppercase text-sm">Fundadora de MB Signature Rifas</p>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined text-primary/20 text-[80px] absolute -top-8 -left-8 select-none font-variation-settings-fill">format_quote</span>
+<p class="text-on-surface-variant text-xl leading-relaxed italic relative z-10">
+                        "Mi compromiso es brindar sorteos transparentes y seguros para todos los colombianos. Cada sorteo es una oportunidad de cambiar vidas con total honestidad."
+                    </p>
+</div>
+<div class="pt-4 flex items-center gap-4">
+<div class="w-12 h-[1px] bg-primary"></div>
+<span class="font-label-caps text-[12px] text-on-surface-variant tracking-[0.2em] uppercase">Compromiso Garantizado</span>
+</div>
+</div>
+</div>
+</div>
+</section><footer class="w-full py-stack-lg bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="flex flex-col items-center gap-stack-md px-margin-mobile text-center max-w-container-max mx-auto">
+<span class="font-display-lg text-headline-md text-primary font-extrabold tracking-tighter">MB Signature Rifas</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+            © 2024 MB Signature Rifas. Todos los derechos reservados. Operado por MB Signature Rifas bajo principios de transparencia. Participación para mayores de 18 años.
+        </p>
+<div class="flex flex-wrap justify-center gap-8 mt-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-medium" href="#">Términos y Condiciones</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-medium" href="#">Privacidad</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-medium" href="#">Contacto</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-medium" href="#">Responsabilidad</a>
+</div>
+</div>
+</footer>
+<script>
+    // Reveal animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section > div').forEach(el => {
+        el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+        observer.observe(el);
+    });
+</script>
+</body></html>

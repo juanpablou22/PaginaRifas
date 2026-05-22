@@ -1,0 +1,621 @@
+:root {
+  --bg: #070707;
+  --bg-soft: #101010;
+  --panel: rgba(18, 16, 14, 0.88);
+  --panel-border: rgba(212, 175, 55, 0.26);
+  --text: #f6efe3;
+  --muted: #c8bca5;
+  --gold: #d6ad49;
+  --gold-strong: #f2d57c;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+  --radius: 26px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(214, 173, 73, 0.16), transparent 28%),
+    radial-gradient(circle at 80% 15%, rgba(255, 215, 120, 0.11), transparent 24%),
+    radial-gradient(circle at 75% 85%, rgba(214, 173, 73, 0.12), transparent 24%),
+    linear-gradient(180deg, #050505 0%, #0f0d0b 42%, #050505 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 110px 110px;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,0.8), transparent 88%);
+  opacity: 0.18;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.page-glow {
+  position: fixed;
+  width: 34rem;
+  height: 34rem;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.page-glow-left {
+  top: 8rem;
+  left: -10rem;
+  background: rgba(214, 173, 73, 0.45);
+}
+
+.page-glow-right {
+  right: -10rem;
+  bottom: 4rem;
+  background: rgba(255, 220, 130, 0.3);
+}
+
+.topbar,
+main,
+.footer {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(18px);
+}
+
+.topbar::after {
+  content: "";
+  position: absolute;
+  inset: 100% 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(214, 173, 73, 0.3), transparent);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.brand-logo {
+  width: 3.8rem;
+  height: 3.8rem;
+  object-fit: cover;
+  border-radius: 1.1rem;
+  border: 1px solid rgba(214, 173, 73, 0.35);
+  background: rgba(10, 10, 10, 0.5);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28), inset 0 0 20px rgba(214, 173, 73, 0.08);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-text strong,
+.section-heading h2,
+.hero-copy h1,
+.contact h2,
+.winner-card span,
+.result-badge {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.brand-text strong {
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-text small {
+  color: var(--muted);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1.4rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--gold-strong);
+}
+
+.cta,
+.ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.95rem 1.35rem;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  font-weight: 700;
+}
+
+.cta {
+  color: #140f06;
+  background: linear-gradient(135deg, #f7dd91 0%, #d7a942 44%, #b98b1d 100%);
+  box-shadow: 0 16px 32px rgba(214, 173, 73, 0.22);
+}
+
+.ghost {
+  border: 1px solid rgba(214, 173, 73, 0.35);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+}
+
+.cta:hover,
+.ghost:hover,
+.cta-small:hover,
+.cta-large:hover {
+  transform: translateY(-2px);
+}
+
+.cta-small {
+  padding: 0.8rem 1.05rem;
+  font-size: 0.9rem;
+}
+
+main {
+  padding: 1.5rem 0 3rem;
+}
+
+.hero,
+.showcase,
+.benefits,
+.winners,
+.raffle,
+.contact {
+  margin-top: 1.5rem;
+  border: 1px solid rgba(214, 173, 73, 0.18);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(16, 14, 12, 0.94), rgba(10, 10, 10, 0.92));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.hero-copy {
+  padding: 0.5rem 0;
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  color: var(--gold-strong);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 5.7vw, 5.3rem);
+  line-height: 0.95;
+  max-width: 12ch;
+  letter-spacing: -0.04em;
+}
+
+.lead {
+  max-width: 58ch;
+  color: var(--muted);
+  font-size: 1.03rem;
+  line-height: 1.75;
+  margin: 1.2rem 0 0;
+  font-weight: 400;
+}
+
+.hero-actions,
+.raffle-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.8rem;
+}
+
+.metrics article,
+.winner-card,
+.benefit-card,
+.panel {
+  border: 1px solid rgba(214, 173, 73, 0.18);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 22px;
+}
+
+.metrics article {
+  padding: 1rem 1.1rem;
+}
+
+.metrics strong {
+  display: block;
+  color: var(--gold-strong);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.metrics span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 0.35rem;
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 34rem;
+}
+
+.visual-card {
+  position: absolute;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(214, 173, 73, 0.22);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.visual-main {
+  inset: 0 0 3.4rem 1.7rem;
+}
+
+.visual-overlay {
+  width: 42%;
+  right: 0;
+  bottom: 0;
+  transform: rotate(-4deg);
+}
+
+.visual-card img,
+.portrait {
+  height: 100%;
+  object-fit: cover;
+}
+
+.showcase,
+.benefits,
+.winners,
+.raffle,
+.contact {
+  padding: 1.7rem;
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 1.3rem;
+}
+
+.section-heading h2,
+.contact h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+}
+
+.showcase-grid,
+.benefit-grid,
+.raffle-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.showcase-grid {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.about-panel {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.portrait {
+  border-radius: 18px;
+  min-height: 16rem;
+}
+
+.story-panel,
+.benefit-card,
+.raffle-form,
+.raffle-result {
+  padding: 1.2rem;
+}
+
+.story-panel h3,
+.about-panel h3,
+.benefit-card h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.story-panel p,
+.about-panel p,
+.benefit-card p,
+.helper,
+.result-text,
+.winner-card p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.story-panel ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.benefit-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.benefit-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  color: #130e05;
+  background: linear-gradient(135deg, #f6dd8c, #b98b1d);
+  font-weight: 800;
+}
+
+.winner-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.winner-card {
+  min-height: 10rem;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background:
+    linear-gradient(180deg, rgba(214, 173, 73, 0.16), rgba(255, 255, 255, 0.02)),
+    rgba(255,255,255,0.02);
+}
+
+.winner-card span {
+  color: var(--gold-strong);
+  font-size: 2.1rem;
+  line-height: 1;
+}
+
+.raffle-grid {
+  grid-template-columns: 1fr 0.8fr;
+}
+
+.raffle-form label {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+
+.steps-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.steps-list li + li {
+  margin-top: 0.8rem;
+}
+
+.raffle-form textarea {
+  width: 100%;
+  resize: vertical;
+  border-radius: 20px;
+  border: 1px solid rgba(214, 173, 73, 0.24);
+  background: rgba(0, 0, 0, 0.34);
+  color: var(--text);
+  padding: 1rem;
+  font: inherit;
+  min-height: 14rem;
+}
+
+.raffle-form textarea:focus {
+  outline: 2px solid rgba(214, 173, 73, 0.4);
+  outline-offset: 2px;
+}
+
+.helper {
+  margin-top: 0.9rem;
+  font-size: 0.92rem;
+}
+
+.raffle-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100%;
+}
+
+.result-badge {
+  font-size: clamp(2rem, 4vw, 3.7rem);
+  color: var(--gold-strong);
+  line-height: 0.95;
+}
+
+.result-text {
+  margin-top: 0.8rem;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cta-large {
+  padding: 1.1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.3rem 0 2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.reveal {
+  animation: rise 900ms ease both;
+}
+
+.reveal:nth-of-type(2) { animation-delay: 70ms; }
+.reveal:nth-of-type(3) { animation-delay: 140ms; }
+.reveal:nth-of-type(4) { animation-delay: 210ms; }
+.reveal:nth-of-type(5) { animation-delay: 280ms; }
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1080px) {
+  .nav {
+    display: none;
+  }
+
+  .hero,
+  .showcase-grid,
+  .raffle-grid,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .winner-strip,
+  .benefit-grid,
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-visual {
+    min-height: 28rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .topbar,
+  .contact,
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero,
+  .showcase,
+  .benefits,
+  .winners,
+  .raffle,
+  .contact {
+    padding: 1.1rem;
+  }
+
+  .brand-logo {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.9rem;
+  }
+
+  .hero-visual {
+    min-height: 24rem;
+  }
+
+  .visual-main {
+    inset: 0;
+  }
+
+  .visual-overlay {
+    width: 46%;
+  }
+
+  .metrics,
+  .benefit-grid,
+  .winner-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .about-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .cta,
+  .ghost,
+  .cta-large {
+    width: 100%;
+  }
+}
