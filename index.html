@@ -153,14 +153,34 @@ Ver ganadores
 <div class="relative mx-auto w-full max-w-[640px]">
 <div class="absolute inset-0 -z-10 rounded-[2.75rem] bg-primary/10 blur-[90px]"></div>
 <div class="relative overflow-hidden rounded-[2.5rem] border border-primary/20 bg-surface-container shadow-[0_0_70px_rgba(212,175,55,0.18)]">
-<img src="Premio2.jpeg" alt="Mujer sosteniendo billetes de pesos colombianos" class="h-[540px] w-full object-cover object-center" />
+<img src="premio4.jpeg" alt="Mujer sosteniendo billetes de pesos colombianos" class="h-[540px] w-full object-cover object-center" />
 <div class="absolute bottom-6 left-6 right-6 glass-card rounded-[1.75rem] p-6">
 <div class="flex items-center justify-between gap-4">
 <div>
-<p class="text-[10px] uppercase tracking-[0.35em] text-primary/80">Premio mayor actual</p>
-<p class="mt-1 text-3xl font-bold text-white">$50.000.000 COP</p>
+<p class="text-[10px] uppercase tracking-[0.35em] text-primary/80">¡Que esperas entra!</p>
+<div id="winnerModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-4 backdrop-blur-xl">
+<button type="button" id="winnerModalClose" class="absolute inset-0 cursor-default" aria-label="Cerrar vista ampliada"></button>
+<div class="relative z-10 w-full max-w-5xl overflow-hidden rounded-[2rem] border border-primary/25 bg-background shadow-[0_30px_120px_rgba(0,0,0,0.7)]">
+<div class="flex items-center justify-between border-b border-white/10 px-5 py-4">
+<div>
+<p class="text-[11px] uppercase tracking-[0.35em] text-primary/80">Ganadores reales</p>
+<h3 id="winnerModalTitle" class="mt-1 text-lg font-bold text-white">Vista ampliada</h3>
 </div>
-<span class="rounded-xl bg-primary px-4 py-2 text-sm font-extrabold text-on-primary">Efectivo</span>
+<button type="button" id="winnerModalCloseButton" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:border-primary/40 hover:text-primary" aria-label="Cerrar">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<div class="bg-[#080808] p-3 md:p-5">
+<img id="winnerModalImage" src="" alt="" class="max-h-[78vh] w-full rounded-[1.25rem] object-contain object-center" />
+</div>
+</div>
+</div>
+
+</div>
+<a href="https://chat.whatsapp.com/L6FR4fjVzm38WAV6TiD1vg?mode=gi_t" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary px-5 py-3 text-sm font-extrabold uppercase tracking-[0.24em] text-on-primary shadow-[0_18px_40px_rgba(212,175,55,0.28)] transition-transform hover:-translate-y-0.5 hover:shadow-[0_22px_50px_rgba(212,175,55,0.35)]">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+Únete al grupo
+</a>
 </div>
 </div>
 </div>
@@ -205,35 +225,39 @@ Ganadores reales
 </div>
 <h2 class="mt-5 font-display-lg text-5xl text-white md:text-6xl">Ellos confiaron, participaron y ganaron</h2>
 </div>
-<div class="mt-10 grid gap-5 lg:grid-cols-4">
-<article class="overflow-hidden rounded-[1.75rem] border border-primary/15 bg-background shadow-xl">
-<img src="test1.jpeg" alt="Ganador 1" class="h-56 w-full object-cover" />
-<div class="p-5">
-<p class="text-2xl font-extrabold text-primary">$800.000</p>
-<p class="mt-1 text-sm uppercase tracking-[0.3em] text-on-surface-variant">Ganadora</p>
+<div class="mt-10 grid gap-5 lg:grid-cols-2 xl:grid-cols-4">
+<button type="button" class="group overflow-hidden rounded-[1.5rem] border border-white/8 bg-background/40 text-left shadow-[0_16px_50px_rgba(0,0,0,0.3)] transition-transform hover:-translate-y-1 hover:border-primary/25" data-full="test1.jpeg" data-title="Ganadora 1">
+<div class="bg-[#070707] p-2">
+<img src="test1.jpeg" alt="Ganadora 1" class="h-[28rem] w-full rounded-[1rem] object-contain object-center transition-transform duration-500 group-hover:scale-[1.02]" loading="lazy" />
 </div>
-</article>
-<article class="overflow-hidden rounded-[1.75rem] border border-primary/15 bg-background shadow-xl">
-<img src="test2.jpeg" alt="Ganador 2" class="h-56 w-full object-cover" />
-<div class="p-5">
-<p class="text-2xl font-extrabold text-primary">$600.000</p>
-<p class="mt-1 text-sm uppercase tracking-[0.3em] text-on-surface-variant">Ganadora</p>
+<div class="px-3 pb-4 pt-3 text-center">
+<p class="text-2xl font-extrabold text-primary">Ganador</p>
 </div>
-</article>
-<article class="overflow-hidden rounded-[1.75rem] border border-primary/15 bg-background shadow-xl">
-<img src="test3.jpeg" alt="Ganador 3" class="h-56 w-full object-cover" />
-<div class="p-5">
-<p class="text-2xl font-extrabold text-primary">$1.000.000</p>
-<p class="mt-1 text-sm uppercase tracking-[0.3em] text-on-surface-variant">Ganadora</p>
+</button>
+<button type="button" class="group overflow-hidden rounded-[1.5rem] border border-white/8 bg-background/40 text-left shadow-[0_16px_50px_rgba(0,0,0,0.3)] transition-transform hover:-translate-y-1 hover:border-primary/25" data-full="test2.jpeg" data-title="Ganadora 2">
+<div class="bg-[#070707] p-2">
+<img src="test2.jpeg" alt="Ganadora 2" class="h-[23rem] w-full rounded-[1rem] object-contain object-center transition-transform duration-500 group-hover:scale-[1.02]" loading="lazy" />
 </div>
-</article>
-<article class="overflow-hidden rounded-[1.75rem] border border-primary/15 bg-background shadow-xl">
-<img src="test4.jpeg" alt="Ganador 4" class="h-56 w-full object-cover" />
-<div class="p-5">
-<p class="text-2xl font-extrabold text-primary">$1.200.000</p>
-<p class="mt-1 text-sm uppercase tracking-[0.3em] text-on-surface-variant">Ganador</p>
+<div class="px-3 pb-4 pt-3 text-center">
+<p class="text-2xl font-extrabold text-primary">Ganador</p>
 </div>
-</article>
+</button>
+<button type="button" class="group overflow-hidden rounded-[1.5rem] border border-white/8 bg-background/40 text-left shadow-[0_16px_50px_rgba(0,0,0,0.3)] transition-transform hover:-translate-y-1 hover:border-primary/25" data-full="test3.jpeg" data-title="Ganadora 3">
+<div class="bg-[#070707] p-2">
+<img src="test3.jpeg" alt="Ganadora 3" class="h-[23rem] w-full rounded-[1rem] object-contain object-center transition-transform duration-500 group-hover:scale-[1.02]" loading="lazy" />
+</div>
+<div class="px-3 pb-4 pt-3 text-center">
+<p class="text-2xl font-extrabold text-primary">Ganador</p>
+</div>
+</button>
+<button type="button" class="group overflow-hidden rounded-[1.5rem] border border-white/8 bg-background/40 text-left shadow-[0_16px_50px_rgba(0,0,0,0.3)] transition-transform hover:-translate-y-1 hover:border-primary/25" data-full="test4.jpeg" data-title="Ganador 4">
+<div class="bg-[#070707] p-2">
+<img src="test4.jpeg" alt="Ganador 4" class="h-[23rem] w-full rounded-[1rem] object-contain object-center transition-transform duration-500 group-hover:scale-[1.02]" loading="lazy" />
+</div>
+<div class="px-3 pb-4 pt-3 text-center">
+<p class="text-2xl font-extrabold text-primary">Ganador</p>
+</div>
+</button>
 </div>
 <div class="mt-8 flex justify-center">
 <a href="https://chat.whatsapp.com/L6FR4fjVzm38WAV6TiD1vg?mode=gi_t" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full bg-primary px-8 py-4 text-sm font-extrabold uppercase tracking-[0.3em] text-on-primary shadow-[0_18px_40px_rgba(212,175,55,0.22)] transition-transform hover:-translate-y-1">
@@ -319,6 +343,41 @@ Unirme al grupo signature
     document.querySelectorAll('section > div').forEach(el => {
         el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
         observer.observe(el);
+    });
+
+    const winnerModal = document.getElementById('winnerModal');
+    const winnerModalImage = document.getElementById('winnerModalImage');
+    const winnerModalTitle = document.getElementById('winnerModalTitle');
+    const winnerModalClose = document.getElementById('winnerModalClose');
+    const winnerModalCloseButton = document.getElementById('winnerModalCloseButton');
+
+    const closeWinnerModal = () => {
+        winnerModal.classList.add('hidden');
+        winnerModal.classList.remove('flex');
+        winnerModalImage.src = '';
+        winnerModalImage.alt = '';
+    };
+
+    document.querySelectorAll('[data-full]').forEach((card) => {
+        card.addEventListener('click', () => {
+            const imageSrc = card.dataset.full;
+            const imageTitle = card.dataset.title || 'Vista ampliada';
+            winnerModalImage.src = imageSrc;
+            winnerModalImage.alt = imageTitle;
+            winnerModalTitle.textContent = imageTitle;
+            winnerModal.classList.remove('hidden');
+            winnerModal.classList.add('flex');
+        });
+    });
+
+    [winnerModalClose, winnerModalCloseButton].forEach((element) => {
+        element.addEventListener('click', closeWinnerModal);
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !winnerModal.classList.contains('hidden')) {
+            closeWinnerModal();
+        }
     });
 </script>
 </body></html>
